@@ -2,10 +2,15 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.*;
 
-    @RestController
+import java.util.*;
+
+
+@RestController
 public class HelloController {
     @GetMapping("/")
         public String helloWorld() {
-        return "Hello from Spring!";
+        ArrayList<String> hello = new ArrayList<String>();
+        hello.add("Hello welcome to Spring!");
+        return hello.get(0);
     }
 }
