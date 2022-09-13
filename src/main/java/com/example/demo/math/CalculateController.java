@@ -4,7 +4,7 @@ import org.springframework.util.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.*;
-import java.util.*;g
+import java.util.*;
 
 @RestController
 
@@ -81,11 +81,11 @@ public class CalculateController {
     @PostMapping("/math/area")
     public String getArea(@ RequestParam String type,
                           @RequestParam (required = false) Integer radius,
-                          @RequestParam (required = false) Integer width, Integer height){
+                          @RequestParam (required = false) Integer width,
+                          @RequestParam Integer height){
         if (type.equals("rectangle") && radius != null) {
             return ("Invalid");
         }
-
 
             return switch (type) {
 
